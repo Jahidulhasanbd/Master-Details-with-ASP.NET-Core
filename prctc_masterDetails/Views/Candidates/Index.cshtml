@@ -1,0 +1,59 @@
+﻿@model IEnumerable<prctc_masterDetails.Models.Candidate>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col">
+        <h2>Candidate List</h2>
+        <div class="d-flex justify-content-end me-2">
+            <a asp-action="Create"asp-controller="Candidates" class="btn btn-primary mb-2"><i class=" fa fa-plus-square"></i>Add New</a>
+        </div>
+        @foreach(var item in Model)
+        {
+            <div class="card mb-4">
+                <div class=" card-header d-flex justify-content-between">
+                    <div>
+                        <img class="rounded-circle"src="@item.Image"width="35"/>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <b>Name :</b>@Html.DisplayFor(x=>item.CandidateName)
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <b>Date Of Birth :</b>@Html.DisplayFor(x=>item.DateOfBirth)
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <b>Phone :</b>@Html.DisplayFor(x=>item.Phone)
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <b>Fresher :</b>@Html.DisplayFor(x=>item.Fresher)
+                    </div>
+                    <div>
+                        <a asp-action="Edit" asp-controller="Candidates" asp-route-id="@item.CandidateId" class="btn btn-outline-success btn-sm"><i class="fa fa-edit"></i></a> &nbsp; &nbsp;
+                        <a asp-action="Delete" asp-controller="Candidates" asp-route-id="@item.CandidateId" class="btn btn-outline-danger btn-sm"><i class="fa fa-trash"></i></a>
+                    </div>
+
+                </div>
+                <div class="card-body">
+                    <table class="table table-borderd table-striped table-responsive-sm">
+                        <thead class="table-primary fw-bold">
+                            <tr>
+                                <th>Skills</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach(var i in item.CandidateSkills)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(x=>i.Skill.SkillName)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        }
+    </div>
+
+</div>
+

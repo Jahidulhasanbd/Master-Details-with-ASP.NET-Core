@@ -1,0 +1,9 @@
+﻿@model prctc_masterDetails.Models.Skill
+<div class="row d-flex justify-content-between">
+    <div class="col-10">
+        @Html.DropDownListFor(x=>x.SkillId,ViewBag.skills as SelectList,"---Select---",new{@class="form-control"})
+    </div>
+    <div class="col-2">
+        <a class="btn-danger" id="DeleteSkill"><i class="fa fa-trash"></i></a>
+    </div>
+</div>

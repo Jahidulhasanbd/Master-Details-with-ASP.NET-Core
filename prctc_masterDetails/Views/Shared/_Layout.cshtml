@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/ajax/dist/jquery.unobtrusive-ajax.js"></script>
+     <script type="text/javascript">
+    function LoadData(SkillId = null) {
+    var skillContainer = $("#skillContainer");
+    $.ajax({
+    url: "/Candidates/AddNewSkill/" + SkillId ?? "",
+    type: "GET",
+    success: function (data) {
+    skillContainer.append(data);
+    }
+    });
+    }
+    $(document).on("click", "#btnAdd", function (e) {
+    e.preventDefault();
+    LoadData();
+    });
+    $(document).on("click", "#DeleteSkill", function (e) {
+    e.preventDefault();
+    $(this).parent().parent().remove();
+    });
+    </script>
+   
+    <style>
+        body {
+            font-family: 'Century Gothic';
+            font-size: .90em;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #7431F9; color:white;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color:white;"> <img src="~/images/r.jpg" style="width:42px; height: 40px " /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav fw-bold fs-5">
+                    <li class="nav-item">
+                        @Html.ActionLink("Home","Index","Home",new{},new{@class="nav-link",style="color:white;"})
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Candidate","Index","Candidates",new{},new{@class="nav-link",style="color:white;"})
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid p-4">
+        @RenderBody()
+    </div>
+    <footer class="container-fluid">
+        <p class="text-center">&copy; @DateTime.Now.Year - www.isdb-bisew.org</p>
+    </footer>
+    <environment>
+        <script src="~/lib/bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+
+    </environment>
+
+    @RenderSection("scripts",false)
+    @RenderSection("styles",false)
+</body>
+</html>

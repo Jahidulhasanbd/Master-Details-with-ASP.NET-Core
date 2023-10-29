@@ -1,0 +1,98 @@
+﻿@model prctc_masterDetails.Models.ViewModels.CandidateVM
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="row">
+    <div class="col">
+        <h2>Edit Candidate</h2>
+        <form asp-action="Edit"asp-controller="Candidates" enctype="multipart/form-data"method="post">
+            <div class="row">
+                <div class="col-6">
+                    
+                    <input asp-for="CandidateId" type="hidden"/>
+                    <input asp-for="Image" type="hidden" />
+                    <div class="row mb-2">
+                        <label asp-for="CandidateName"class="col-form-label col-3"></label>
+                        <div class="col-6">
+                            <input asp-for="CandidateName" class="form-control form-control-sm"/>
+
+                        </div>
+                        <div class="col-3">
+                            <span asp-validation-for="CandidateName" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="row mb-2">
+                        <label asp-for="DateOfBirth" class="col-form-label col-3"></label>
+                        <div class="col-6">
+                            <input asp-for="DateOfBirth" class="form-control form-control-sm" type="date"/>
+
+                        </div>
+                        <div class="col-3">
+                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="row mb-2">
+                        <label asp-for="Phone" class="col-form-label col-3"></label>
+                        <div class="col-6">
+                            <input asp-for="Phone" class="form-control form-control-sm" />
+
+                        </div>
+                        <div class="col-3">
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="row mb-2">
+                        <label asp-for="ImagePath" class="col-form-label col-3"></label>
+                        <div class="col-6">
+                            <input asp-for="ImagePath" class="form-control form-control-sm" type="file"/>
+                            <img class="rounded-circle" width="32" src="@Model.Image">
+
+                        </div>
+                        <div class="col-3">
+                            <span asp-validation-for="ImagePath" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="row mb-2">
+                        <label asp-for="Fresher" class="col-form-label col-3"></label>
+                        <div class="col-6 mt-2">
+                            <label class="form-check-label"></label>
+                            <input asp-for="Fresher" class="form-check-input" />
+
+                        </div>                       
+
+                    </div>                   
+
+                </div>
+                <div class="col-6">
+                    <h2>Select Skill</h2>
+                    <div class="d-flex justify-content-end">
+                        <a id="btnAdd" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <div id="skillContainer">
+                        @foreach(var item in Model.SkillList)
+                        {
+                            <script>
+                                LoadData(@item)
+                            </script>
+                        }
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i>update</button>
+
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+
+</div>
+

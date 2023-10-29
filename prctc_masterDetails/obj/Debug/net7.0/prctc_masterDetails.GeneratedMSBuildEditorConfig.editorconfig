@@ -1,0 +1,53 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = prctc_masterDetails
+build_property.RootNamespace = prctc_masterDetails
+build_property.ProjectDir = H:\.NET Core\all class prctc\prctc_masterDetails\prctc_masterDetails\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = H:\.NET Core\all class prctc\prctc_masterDetails\prctc_masterDetails
+build_property._RazorSourceGeneratorDebug = 
+
+[H:/.NET Core/all class prctc/prctc_masterDetails/prctc_masterDetails/Views/Candidates/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/.NET Core/all class prctc/prctc_masterDetails/prctc_masterDetails/Views/Candidates/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/.NET Core/all class prctc/prctc_masterDetails/prctc_masterDetails/Views/Candidates/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/.NET Core/all class prctc/prctc_masterDetails/prctc_masterDetails/Views/Candidates/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/.NET Core/all class prctc/prctc_masterDetails/prctc_masterDetails/Views/Candidates/_addNewSkill.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlc1xfYWRkTmV3U2tpbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/.NET Core/all class prctc/prctc_masterDetails/prctc_masterDetails/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/.NET Core/all class prctc/prctc_masterDetails/prctc_masterDetails/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/.NET Core/all class prctc/prctc_masterDetails/prctc_masterDetails/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/.NET Core/all class prctc/prctc_masterDetails/prctc_masterDetails/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
